@@ -1,76 +1,130 @@
 <template>
-    <div id="app">
-      <!-- 导航区域 -->
-      <headerNav/>
-      <router-view>
-            <el-main>
-                <el-table :data="tableData2" style="width: 100%" :row-class-name="tableRowClassName">
-                    <el-table-column prop="date" label="日期" width="180"></el-table-column>
-                    <el-table-column prop="name" label="类型" width="180"></el-table-column>
-                    <el-table-column prop="address" label="消息内容"></el-table-column>
-                    <el-table-column fixed="right" label="操作" width="100">
-                        <template slot-scope="scope">
-                            <el-button @click="handleClick(scope.row)" type="text" size="small">查看</el-button>
-                        </template>
-                    </el-table-column>
-                </el-table>
-            </el-main>
-      </router-view>
+    <div class="main-container">
+      <keep-alive>
+        <router-view>
+          <mu-container>
+            <mu-paper :z-depth="1">
+              <mu-data-table stripe :columns="columns" :sort.sync="sort" @sort-change="handleSortChange" :data="list.slice(0, 6)">
+                <template slot-scope="scope">
+                  <td>{{scope.row.name}}</td>
+                  <td class="is-right">{{scope.row.calories}}</td>
+                  <td class="is-right">{{scope.row.fat}}</td>
+                  <td class="is-right">{{scope.row.carbs}}</td>
+                  <td class="is-right">{{scope.row.protein}}</td>
+                  <td class="is-right">{{scope.row.iron}}%</td>
+                </template>
+              </mu-data-table>
+            </mu-paper>
+          </mu-container>
+        </router-view>
+      </keep-alive>
     </div>
 </template>
 
 <script>
-  import headerNav from '../components/header'
-
-  export default {
-    components:{
-      headerNav
-    },
-    data() {
-      return {
-        activeIndex: '1',
-        tableData2: [{
-          date: '2016-05-02',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄',
-        }, {
-          date: '2016-05-04',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }, {
-          date: '2016-05-01',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄',
-        }, {
-          date: '2016-05-03',
-          name: '王小虎',
-          address: '上海市普陀区金沙江路 1518 弄'
-        }]
-      };
-    },
-    methods: {
-      tableRowClassName({row, rowIndex}) {
-        if (rowIndex === 1) {
-          return 'warning-row';
-        } else if (rowIndex === 3) {
-          return 'success-row';
-        }
-        return '';
+export default {
+  data () {
+    return {
+      sort: {
+        name: '',
+        order: 'asc'
       },
-      handleClick(row) {
-        console.log(row);
-      }
+      columns: [
+          { title: 'Dessert (100g serving)', width: 200, name: 'name' },
+          { title: 'Calories', name: 'calories', width: 126, align: 'center', sortable: true },
+          { title: 'Fat (g)', name: 'fat', width: 126, align: 'center', sortable: true },
+          { title: 'Carbs (g)', name: 'carbs', width: 126, align: 'center', sortable: true },
+          { title: 'Protein (g)', name: 'protein', width: 126, align: 'center', sortable: true },
+          { title: 'Iron (%)', name: 'iron', width: 126, align: 'center', sortable: true }
+      ],
+      list: [
+        {
+            name: 'Frozen Yogurt',
+            calories: 159,
+            fat: 6.0,
+            carbs: 24,
+            protein: 4.0,
+            iron: 1
+          },
+          {
+            name: 'Ice cream sandwich',
+            calories: 237,
+            fat: 9.0,
+            carbs: 37,
+            protein: 4.3,
+            iron: 1
+          },
+          {
+            name: 'Eclair',
+            calories: 262,
+            fat: 16.0,
+            carbs: 23,
+            protein: 6.0,
+            iron: 7
+          },
+          {
+            name: 'Cupcake',
+            calories: 305,
+            fat: 3.7,
+            carbs: 67,
+            protein: 4.3,
+            iron: 8
+          },
+          {
+            name: 'Gingerbread',
+            calories: 356,
+            fat: 16.0,
+            carbs: 49,
+            protein: 3.9,
+            iron: 16
+          },
+          {
+            name: 'Jelly bean',
+            calories: 375,
+            fat: 0.0,
+            carbs: 94,
+            protein: 0.0,
+            iron: 0
+          },
+          {
+            name: 'Lollipop',
+            calories: 392,
+            fat: 0.2,
+            carbs: 98,
+            protein: 0,
+            iron: 2
+          },
+          {
+            name: 'Honeycomb',
+            calories: 408,
+            fat: 3.2,
+            carbs: 87,
+            protein: 6.5,
+            iron: 45
+          },
+          {
+            name: 'Donut',
+            calories: 452,
+            fat: 25.0,
+            carbs: 51,
+            protein: 4.9,
+            iron: 22
+          },
+          {
+            name: 'KitKat',
+            calories: 518,
+            fat: 26.0,
+            carbs: 65,
+            protein: 7,
+            iron: 6
+          }
+      ]
+    };
+  },
+  methods: {
+    handleSortChange ({name, order}) {
+      this.list = this.list.sort((a, b) => order === 'asc' ? a[name] - b[name] : b[name] - a[name]);
     }
   }
+};
 </script>
-
-<style>
-
-  .el-table .warning-row {
-    background: oldlace;
-  }
-
-  .el-table .success-row {
-    background: #f0f9eb;
-  }
-</style>

@@ -1,13 +1,13 @@
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
 import router from './router'
+import Layout from './components/Layout'   //引入Layout组件，将App替换成我们的布局组件Layout
 
-import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
+import MuseUI from 'muse-ui';
+import 'muse-ui/dist/muse-ui.css';
 
-Vue.use(ElementUI);
+Vue.use(MuseUI);
 
 import axios from 'axios'
 import qs from 'qs'
@@ -24,7 +24,5 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
-  render: h => h(App), //vue2.0写法
-  // components: { App }, //vue1.0写法
-  template: '<App/>'
+  render: h => h(Layout), //vue2.0写法
 })
