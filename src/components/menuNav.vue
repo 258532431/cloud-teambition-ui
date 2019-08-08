@@ -7,7 +7,7 @@
       @select="handleSelect"
       text-color="#000000"
       active-text-color="#48D1CC"
-      router="true">
+      :router = true>
       <el-menu-item index="1" route="/">消息中心</el-menu-item>
       <el-menu-item index="2" route="/plan">项目计划</el-menu-item>
       <el-submenu index="3">
@@ -24,7 +24,7 @@
       </el-submenu>
       <el-submenu index="5">
           <template slot="title">项目统计</template>
-          <el-menu-item index="5-1">任务完成率</el-menu-item>
+          <el-menu-item index="5-1" route="/statics">任务完成率</el-menu-item>
           <el-menu-item index="5-2">缺陷完成率</el-menu-item>
       </el-submenu>
       </el-menu>
