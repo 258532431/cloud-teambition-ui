@@ -8,7 +8,7 @@
       text-color="#000000"
       active-text-color="#48D1CC"
       :router = true>
-      <el-menu-item index="1" route="/">消息中心</el-menu-item>
+      <el-menu-item index="1" route="/">处理中心</el-menu-item>
       <el-menu-item index="2" route="/plan">项目计划</el-menu-item>
       <el-submenu index="3">
           <template slot="title">任务管理</template>
