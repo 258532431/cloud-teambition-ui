@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import index from '@/view/index'
 import plan from '@/view/plan/index'
 import task from '@/view/task/index'
-import statics from '@/view/statics/index'
+import taskComplete from '@/view/statics/taskComplete'
 
 Vue.use(Router)
 
@@ -25,9 +25,9 @@ export default new Router({
       component: task
     },
     {
-      path: '/statics',
-      name: 'statics',
-      component: statics
+      path: '/taskComplete',
+      name: 'taskComplete',
+      component: taskComplete
     },
   ]
 })

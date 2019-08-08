@@ -24,7 +24,7 @@
       </el-submenu>
       <el-submenu index="5">
           <template slot="title">项目统计</template>
-          <el-menu-item index="5-1" route="/statics">任务完成率</el-menu-item>
+          <el-menu-item index="5-1" route="/taskComplete">任务完成率</el-menu-item>
           <el-menu-item index="5-2">缺陷完成率</el-menu-item>
       </el-submenu>
       </el-menu>
