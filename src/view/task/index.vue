@@ -9,6 +9,17 @@
                     <el-button type="primary" @click="onSearchSubmit">查询</el-button>
                 </el-form-item>
             </el-form>
+            
+            <el-badge :value="12" class="item">
+              <el-button size="small">待完成任务</el-button>
+            </el-badge>
+            <el-badge :value="12" class="item">
+              <el-button size="small">正在进行的任务</el-button>
+            </el-badge>
+            <el-badge :value="12" class="item">
+              <el-button size="small">已完成任务</el-button>
+            </el-badge>
+
             <mu-divider/>
             <el-table
                 :data="tableData"
@@ -134,6 +145,24 @@
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
           endTime: '2016-05-02'
+        }, {
+          createTime: '2016-05-02',
+          name: '消息管理列表页面',
+          desc: '列表分页展示数据，带条件搜索',
+          taskHour: '2',
+          endTime: '2016-05-02'
+        }, {
+          createTime: '2016-05-02',
+          name: '消息管理列表页面',
+          desc: '列表分页展示数据，带条件搜索',
+          taskHour: '2',
+          endTime: '2016-05-02'
+        }, {
+          createTime: '2016-05-02',
+          name: '消息管理列表页面',
+          desc: '列表分页展示数据，带条件搜索',
+          taskHour: '2',
+          endTime: '2016-05-02'
         }],
         searchForm: {
             taskName: ''
@@ -157,3 +186,10 @@
     }
   }
 </script>
+
+<style>
+.item {
+  margin-top: 10px;
+  margin-right: 40px;
+}
+</style>

@@ -17,9 +17,15 @@
           <el-menu-item index="3-3">所有任务</el-menu-item>
       </el-submenu>
       <el-submenu index="4">
+          <template slot="title">缺陷管理</template>
+          <el-menu-item index="4-1">我的缺陷</el-menu-item>
+          <el-menu-item index="4-2">缺陷分配</el-menu-item>
+          <el-menu-item index="4-3">所有缺陷</el-menu-item>
+      </el-submenu>
+      <el-submenu index="5">
           <template slot="title">项目统计</template>
-          <el-menu-item index="4-1">任务完成率</el-menu-item>
-          <el-menu-item index="4-2">缺陷完成率</el-menu-item>
+          <el-menu-item index="5-1">任务完成率</el-menu-item>
+          <el-menu-item index="5-2">缺陷完成率</el-menu-item>
       </el-submenu>
       </el-menu>
     </div>
