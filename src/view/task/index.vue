@@ -41,12 +41,12 @@
                 </el-table-column>
                 <el-table-column
                 prop="taskHour"
-                label="预计耗时"
+                label="预计耗时（h）"
                 width="180">
                 </el-table-column>
                 <el-table-column
                 prop="endTime"
-                label="预计完成时间（h）"
+                label="预计完成时间"
                 width="180">
                 </el-table-column>
                 <el-table-column
