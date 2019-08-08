@@ -40,7 +40,7 @@
             </el-table-column>
         </el-table>
         </div>
-        <div class="block" style="margin-top:30px;">
+        <div class="block" style="margin-top:30px;margn-bottom:20px;">
             <el-pagination
             @size-change="handleSizeChange"
             @current-change="handleCurrentChange"

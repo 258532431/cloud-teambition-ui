@@ -19,6 +19,7 @@
       </div>
     </el-card>
     <div style="clear: both"></div>
+
     <div style="margin-top:10px;width:100%;">
       <div class="el-icon-message" style="line-height:3;">&nbsp;系统消息</div>
       <mu-divider/>
@@ -43,6 +44,18 @@
           prop="title">
         </el-table-column>
       </el-table>
+    </div>
+
+    <div class="block" style="margin-top:30px;margin-bottom:20px;">
+        <el-pagination
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        :current-page="currentPage4"
+        :page-sizes="[100, 200, 300, 400]"
+        :page-size="100"
+        layout="total, sizes, prev, pager, next, jumper"
+        :total="400">
+        </el-pagination>
     </div>
   </div>
 </template>
@@ -83,8 +96,36 @@
           type: '系统通知',
           title: '这是一条系统通知4',
           content: '这是一条系统通知的内容1'
-        }]
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知4',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知4',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知4',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知4',
+          content: '这是一条系统通知的内容1'
+        }],
+        currentPage1: 5,
+        currentPage2: 5,
+        currentPage3: 5,
+        currentPage4: 4
       }
+    },
+    methods: {
+        handleSizeChange(val) {
+            console.log(`每页 ${val} 条`);
+        },
+        handleCurrentChange(val) {
+            console.log(`当前页: ${val}`);
+        }
     }
   }
 </script>
