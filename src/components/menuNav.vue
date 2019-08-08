@@ -12,7 +12,7 @@
       <el-menu-item index="2" route="/plan">项目计划</el-menu-item>
       <el-submenu index="3">
           <template slot="title">任务管理</template>
-          <el-menu-item index="3-1">我的任务</el-menu-item>
+          <el-menu-item index="3-1" route="/task">我的任务</el-menu-item>
           <el-menu-item index="3-2">任务分配</el-menu-item>
           <el-menu-item index="3-3">所有任务</el-menu-item>
       </el-submenu>

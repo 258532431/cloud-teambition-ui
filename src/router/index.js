@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import index from '@/view/index'
 import plan from '@/view/plan/index'
+import task from '@/view/task/index'
 
 Vue.use(Router)
 
@@ -16,6 +17,11 @@ export default new Router({
       path: '/plan',
       name: 'plan',
       component: plan
+    },
+    {
+      path: '/task',
+      name: 'task',
+      component: task
     },
   ]
 })
