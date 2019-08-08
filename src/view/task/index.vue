@@ -5,6 +5,13 @@
                 <el-form-item label="任务名称">
                     <el-input v-model="searchForm.taskName" placeholder="任务名称"></el-input>
                 </el-form-item>
+                <el-form-item label="任务状态">
+                  <el-select v-model="searchForm.status" placeholder="请选择任务状态">
+                    <el-option label="待处理" value="0"></el-option>
+                    <el-option label="进行中" value="1"></el-option>
+                    <el-option label="已完成" value="2"></el-option>
+                  </el-select>
+                </el-form-item>
                 <el-form-item>
                     <el-button type="primary" @click="onSearchSubmit">查询</el-button>
                 </el-form-item>
