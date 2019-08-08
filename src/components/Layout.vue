@@ -28,7 +28,7 @@
     min-height: 100%;
 		min-width: 1650px;
 		overflow-x: auto;  /*如果溢出框，则应该提供滚动机制*/
-    margin-top: 5px;
+    margin-top: 1px;
     background-color: #FFFFFF;
 	}
 </style>
