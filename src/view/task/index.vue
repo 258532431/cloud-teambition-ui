@@ -50,6 +50,16 @@
                 width="180">
                 </el-table-column>
                 <el-table-column
+                prop="overTime"
+                label="实际完成时间"
+                width="180">
+                </el-table-column>
+                <el-table-column
+                prop="status"
+                label="状态"
+                width="180">
+                </el-table-column>
+                <el-table-column
                 fixed="right"
                 label="操作"
                 width="150">
@@ -84,85 +94,113 @@
           name: '消息管理列表页面',
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          overTime: '2016-05-02',
+          status: '进行中'
         }, {
           createTime: '2016-05-02',
           name: '消息管理列表页面',
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          overTime: '2016-05-02',
+          status: '待处理'
         }, {
           createTime: '2016-05-02',
           name: '消息管理列表页面',
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          overTime: '2016-05-02',
+          status: '已完成'
         }, {
           createTime: '2016-05-02',
           name: '消息管理列表页面',
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          overTime: '2016-05-02',
+          status: '已作废'
         }, {
           createTime: '2016-05-02',
           name: '消息管理列表页面',
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          overTime: '2016-05-02',
+          status: '进行中'
         }, {
           createTime: '2016-05-02',
           name: '消息管理列表页面',
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          overTime: '2016-05-02',
+          status: '进行中'
         }, {
           createTime: '2016-05-02',
           name: '消息管理列表页面',
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          overTime: '2016-05-02',
+          status: '进行中'
         }, {
           createTime: '2016-05-02',
           name: '消息管理列表页面',
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          overTime: '2016-05-02',
+          status: '进行中'
         }, {
           createTime: '2016-05-02',
           name: '消息管理列表页面',
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          overTime: '2016-05-02',
+          status: '进行中'
         }, {
           createTime: '2016-05-02',
           name: '消息管理列表页面',
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          overTime: '2016-05-02',
+          status: '进行中'
         }, {
           createTime: '2016-05-02',
           name: '消息管理列表页面',
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          overTime: '2016-05-02',
+          status: '进行中'
         }, {
           createTime: '2016-05-02',
           name: '消息管理列表页面',
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          overTime: '2016-05-02',
+          status: '进行中'
         }, {
           createTime: '2016-05-02',
           name: '消息管理列表页面',
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          overTime: '2016-05-02',
+          status: '进行中'
         }, {
           createTime: '2016-05-02',
           name: '消息管理列表页面',
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          overTime: '2016-05-02',
+          status: '进行中'
         }],
         searchForm: {
             taskName: ''
