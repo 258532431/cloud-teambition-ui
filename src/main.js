@@ -2,12 +2,16 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import router from './router'
-import Layout from './components/Layout'   //引入Layout组件，将App替换成我们的布局组件Layout
+// import App from './App'
+import Layout from './components/Layout'
 
 import MuseUI from 'muse-ui';
 import 'muse-ui/dist/muse-ui.css';
-
 Vue.use(MuseUI);
+
+import Element from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+Vue.use(Element);
 
 import axios from 'axios'
 import qs from 'qs'
@@ -25,4 +29,6 @@ new Vue({
   el: '#app',
   router,
   render: h => h(Layout), //vue2.0写法
+  // template: '<App/>', //配置根模板 即打开页面显示那个组件
+  // components: { App } // 注入组件
 })

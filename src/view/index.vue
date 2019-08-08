@@ -1,130 +1,152 @@
 <template>
-    <div class="main-container">
-      <keep-alive>
-        <router-view>
-          <mu-container>
-            <mu-paper :z-depth="1">
-              <mu-data-table stripe :columns="columns" :sort.sync="sort" @sort-change="handleSortChange" :data="list.slice(0, 6)">
-                <template slot-scope="scope">
-                  <td>{{scope.row.name}}</td>
-                  <td class="is-right">{{scope.row.calories}}</td>
-                  <td class="is-right">{{scope.row.fat}}</td>
-                  <td class="is-right">{{scope.row.carbs}}</td>
-                  <td class="is-right">{{scope.row.protein}}</td>
-                  <td class="is-right">{{scope.row.iron}}%</td>
-                </template>
-              </mu-data-table>
-            </mu-paper>
-          </mu-container>
-        </router-view>
-      </keep-alive>
+  <div class="main-container">
+    <el-card class="box-card">
+      <div slot="header" class="clearfix">
+        <span>进行中的计划</span>
+        <el-button style="float: right; padding: 3px 0" type="text">查看</el-button>
+      </div>
+      <div v-for="o in 4" :key="o" class="text item">
+        {{'招商银行项目' + o + ' - 预计完成时间：2019-05-05'}}
+      </div>
+    </el-card>
+    <el-card style="margin-left:0.2%;" class="box-card">
+      <div slot="header" class="clearfix">
+        <span>已完成的计划</span>
+        <el-button style="float: right; padding: 3px 0" type="text">查看</el-button>
+      </div>
+      <div v-for="o in 4" :key="o" class="text item">
+        {{'华夏财富项目' + o + ' - 完成时间：2019-03-06'}}
+      </div>
+    </el-card>
+    <div style="clear: both"></div>
+    <div style="margin-top:10px;width:100%;">
+      <div class="el-icon-message" style="line-height:3;">&nbsp;系统消息</div>
+      <mu-divider/>
+      <el-table
+      :data="tableData5"
+      style="width: 100%;margin-top:10px;">
+        <el-table-column type="expand">
+          <template slot-scope="props">
+            <el-form label-position="left" inline class="demo-table-expand">
+              <el-form-item label="消息内容">
+                <span>{{ props.row.content }}</span>
+              </el-form-item>
+            </el-form>
+          </template>
+        </el-table-column>
+        <el-table-column
+          label="消息类型"
+          prop="type">
+        </el-table-column>
+        <el-table-column
+          label="标题"
+          prop="title">
+        </el-table-column>
+      </el-table>
     </div>
+  </div>
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-      sort: {
-        name: '',
-        order: 'asc'
-      },
-      columns: [
-          { title: 'Dessert (100g serving)', width: 200, name: 'name' },
-          { title: 'Calories', name: 'calories', width: 126, align: 'center', sortable: true },
-          { title: 'Fat (g)', name: 'fat', width: 126, align: 'center', sortable: true },
-          { title: 'Carbs (g)', name: 'carbs', width: 126, align: 'center', sortable: true },
-          { title: 'Protein (g)', name: 'protein', width: 126, align: 'center', sortable: true },
-          { title: 'Iron (%)', name: 'iron', width: 126, align: 'center', sortable: true }
-      ],
-      list: [
-        {
-            name: 'Frozen Yogurt',
-            calories: 159,
-            fat: 6.0,
-            carbs: 24,
-            protein: 4.0,
-            iron: 1
-          },
-          {
-            name: 'Ice cream sandwich',
-            calories: 237,
-            fat: 9.0,
-            carbs: 37,
-            protein: 4.3,
-            iron: 1
-          },
-          {
-            name: 'Eclair',
-            calories: 262,
-            fat: 16.0,
-            carbs: 23,
-            protein: 6.0,
-            iron: 7
-          },
-          {
-            name: 'Cupcake',
-            calories: 305,
-            fat: 3.7,
-            carbs: 67,
-            protein: 4.3,
-            iron: 8
-          },
-          {
-            name: 'Gingerbread',
-            calories: 356,
-            fat: 16.0,
-            carbs: 49,
-            protein: 3.9,
-            iron: 16
-          },
-          {
-            name: 'Jelly bean',
-            calories: 375,
-            fat: 0.0,
-            carbs: 94,
-            protein: 0.0,
-            iron: 0
-          },
-          {
-            name: 'Lollipop',
-            calories: 392,
-            fat: 0.2,
-            carbs: 98,
-            protein: 0,
-            iron: 2
-          },
-          {
-            name: 'Honeycomb',
-            calories: 408,
-            fat: 3.2,
-            carbs: 87,
-            protein: 6.5,
-            iron: 45
-          },
-          {
-            name: 'Donut',
-            calories: 452,
-            fat: 25.0,
-            carbs: 51,
-            protein: 4.9,
-            iron: 22
-          },
-          {
-            name: 'KitKat',
-            calories: 518,
-            fat: 26.0,
-            carbs: 65,
-            protein: 7,
-            iron: 6
-          }
-      ]
-    };
-  },
-  methods: {
-    handleSortChange ({name, order}) {
-      this.list = this.list.sort((a, b) => order === 'asc' ? a[name] - b[name] : b[name] - a[name]);
+  export default {
+    data() {
+      return {
+        tableData5: [{
+          type: '系统通知',
+          title: '这是一条系统通知1',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统公告',
+          title: '这是一条系统公告2',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知3',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知4',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知4',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知4',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知4',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知4',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知4',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知4',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知4',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知4',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知4',
+          content: '这是一条系统通知的内容1'
+        }, {
+          type: '系统通知',
+          title: '这是一条系统通知4',
+          content: '这是一条系统通知的内容1'
+        }]
+      }
     }
   }
-};
 </script>
+
+<style>
+  .text {
+    font-size: 14px;
+  }
+
+  .item {
+    margin-bottom: 18px;
+  }
+
+  .clearfix:before,
+  .clearfix:after {
+    display: table;
+    content: "";
+  }
+  .clearfix:after {
+    clear: both
+  }
+
+  .box-card {
+    width: 49.9%;
+    float: left;
+  }
+
+
+  .demo-table-expand {
+    font-size: 0;
+  }
+  .demo-table-expand label {
+    width: 90px;
+    color: #99a9bf;
+  }
+  .demo-table-expand .el-form-item {
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 50%;
+  }
+</style>
