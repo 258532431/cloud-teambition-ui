@@ -24,9 +24,11 @@ export default {
                 tooltip: {
                     trigger: 'axis'  // axis   item   none三个值
                 },
+                //每条折线的含义
                 legend: {
                     data: ['近七日任务完成率%', '近七日任务未完成率%']
                 },
+                //下载图片按钮
                 toolbox: {
                     feature: {
                         saveAsImage: {}
@@ -43,7 +45,7 @@ export default {
                     type: 'value',
                     name: '完成率%'
                 },
-                //y轴数据，每条折线的名称
+                //y轴数据，每条折线的名称和数据
                 series: [
                     {
                         name: '近七日任务完成率%',
