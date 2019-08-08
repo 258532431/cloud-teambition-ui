@@ -23,7 +23,7 @@
       <div class="el-icon-message" style="line-height:3;">&nbsp;系统消息</div>
       <mu-divider/>
       <el-table
-      :data="tableData5"
+      :data="tableData"
       style="width: 100%;margin-top:10px;">
         <el-table-column type="expand">
           <template slot-scope="props">
@@ -51,7 +51,7 @@
   export default {
     data() {
       return {
-        tableData5: [{
+        tableData: [{
           type: '系统通知',
           title: '这是一条系统通知1',
           content: '这是一条系统通知的内容1'
@@ -62,30 +62,6 @@
         }, {
           type: '系统通知',
           title: '这是一条系统通知3',
-          content: '这是一条系统通知的内容1'
-        }, {
-          type: '系统通知',
-          title: '这是一条系统通知4',
-          content: '这是一条系统通知的内容1'
-        }, {
-          type: '系统通知',
-          title: '这是一条系统通知4',
-          content: '这是一条系统通知的内容1'
-        }, {
-          type: '系统通知',
-          title: '这是一条系统通知4',
-          content: '这是一条系统通知的内容1'
-        }, {
-          type: '系统通知',
-          title: '这是一条系统通知4',
-          content: '这是一条系统通知的内容1'
-        }, {
-          type: '系统通知',
-          title: '这是一条系统通知4',
-          content: '这是一条系统通知的内容1'
-        }, {
-          type: '系统通知',
-          title: '这是一条系统通知4',
           content: '这是一条系统通知的内容1'
         }, {
           type: '系统通知',
