@@ -5,6 +5,8 @@ import router from './router'
 // import App from './App'
 import Layout from './components/Layout'
 
+import store from './vuex/store'
+
 import './assets/css/base.css'
 
 import MuseUI from 'muse-ui';
@@ -30,6 +32,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(Layout), //vue2.0写法
   // template: '<App/>', //配置根模板 即打开页面显示那个组件
   // components: { App } // 注入组件

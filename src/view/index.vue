@@ -131,6 +131,7 @@
             console.log(`当前页: ${val}`);
         },
         toPlan(){
+          this.$store.commit('changeActiveIndex', '2')
           this.$router.push({name: 'plan'})
         }
     }

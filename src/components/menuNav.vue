@@ -32,11 +32,19 @@
 </template>
 
 <script>
+  import {mapState} from 'vuex' //注册state
+
   export default {
+    computed: {
+      //在这里映射 store.state.activeIndex，使用方法和 computed 里的其他属性一样
+      ...mapState([
+          'activeIndex'
+      ])
+    },
     data() {
       return {
         navBarFixed: false,
-        activeIndex: '1'
+        // activeIndex: '1'
       };
     },
     mounted() {
@@ -55,6 +63,7 @@
      },
       handleSelect(key, keyPath) {
         console.log(key, keyPath);
+        this.$store.commit('changeActiveIndex', key)
       }
     }
   }
