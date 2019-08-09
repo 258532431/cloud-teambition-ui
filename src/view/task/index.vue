@@ -9,7 +9,7 @@
             </el-row>
             </div>
 
-            <el-form :inline="true" :model="searchForm" style="margin-left:10px;margin-top:10px;" class="demo-form-inline">
+            <el-form :inline="true" :model="searchForm" style="margin-left:10px;margin-top:5px;" class="demo-form-inline">
                 <el-form-item label="任务名称">
                     <el-input v-model="searchForm.taskName" placeholder="任务名称"></el-input>
                 </el-form-item>
@@ -273,8 +273,9 @@
 
 <style>
 .item {
-  margin-top: 10px;
+  margin-top: 5px;
   margin-right: 40px;
   margin-left: 10px;
+  margin-bottom: 10px;
 }
 </style>
