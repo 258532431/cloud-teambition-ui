@@ -4,6 +4,7 @@ import index from '@/view/index'
 import plan from '@/view/plan/index'
 import planAdd from '@/view/plan/add'
 import task from '@/view/task/index'
+import taskAdd from '@/view/task/add'
 import taskComplete from '@/view/statics/taskComplete'
 
 Vue.use(Router)
@@ -29,6 +30,11 @@ export default new Router({
       path: '/task',
       name: 'task',
       component: task
+    },
+    {
+      path: '/taskAdd',
+      name: 'taskAdd',
+      component: taskAdd
     },
     {
       path: '/taskComplete',

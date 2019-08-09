@@ -4,7 +4,7 @@
             <div style="padding-left:10px;line-height:4;">
             <el-row>
               <el-col :span="24">
-                <el-button type="primary">新增任务</el-button>
+                <el-button type="primary" @click="toAdd">新增任务</el-button>
               </el-col>
             </el-row>
             </div>
@@ -266,6 +266,9 @@
         },
         onSearchSubmit() {
             console.log('onSearchSubmit!');
+        },
+        toAdd(){
+          this.$router.push({name: 'taskAdd'})
         }
     }
   }
