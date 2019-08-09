@@ -1,15 +1,7 @@
 <template>
     <div class="main-container">
         <div style="min-height:100%">
-            <div style="padding-left:10px;line-height:4;">
-            <el-row>
-              <el-col :span="24">
-                <el-button type="primary" @click="toAdd">新增任务</el-button>
-              </el-col>
-            </el-row>
-            </div>
-
-            <el-form :inline="true" :model="searchForm" style="margin-left:10px;margin-top:5px;" class="demo-form-inline">
+            <el-form :inline="true" :model="searchForm" style="margin-left:10px;margin-top:10px;" class="demo-form-inline">
                 <el-form-item label="任务名称">
                     <el-input v-model="searchForm.taskName" placeholder="任务名称"></el-input>
                 </el-form-item>
@@ -34,6 +26,14 @@
                     <el-button type="primary" @click="onSearchSubmit">查询</el-button>
                 </el-form-item>
             </el-form>
+
+            <div style="padding-left:10px;margin-right:25px;width:100px;float:left;">
+            <el-row>
+              <el-col :span="24">
+                <el-button type="primary" @click="toAdd">新增任务</el-button>
+              </el-col>
+            </el-row>
+            </div>
             
             <el-badge :value="12" class="item">
               <el-button size="small">待完成任务</el-button>
