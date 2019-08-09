@@ -6,6 +6,9 @@
                 <el-breadcrumb-item>新增计划</el-breadcrumb-item>
             </el-breadcrumb>
         </div>
+
+        <mu-divider style="margin-top:10px;margin-bottom:15px;width:200px;"/>
+
         <div class="form">
         <el-form :model="ruleForm" :rules="rules" ref="ruleForm" label-width="100px" class="demo-ruleForm">
         <el-form-item label="计划名称" prop="name">
