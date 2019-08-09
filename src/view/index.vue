@@ -42,6 +42,10 @@
         <el-table-column
           label="标题"
           prop="title">
+            <template slot-scope="scope">
+              {{scope.row.title}}
+              <el-badge value="new" class="badge_item"></el-badge>
+            </template>
         </el-table-column>
       </el-table>
     </div>
@@ -67,7 +71,7 @@
         tableData: [{
           type: '系统通知',
           title: '这是一条系统通知1',
-          content: '这是一条系统通知的内容1'
+          content: '这是一条很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的系统通知的内容'
         }, {
           type: '系统公告',
           title: '这是一条系统公告2',
@@ -151,7 +155,7 @@
   .box-card {
     width: 49.9%;
     float: left;
-    height: 300px;
+    height: 250px;
     overflow-y: auto;
   }
 
@@ -166,6 +170,10 @@
   .demo-table-expand .el-form-item {
     margin-right: 0;
     margin-bottom: 0;
-    width: 50%;
+    width: 100%;
+  }
+
+  .badge_item {
+    margin-top: 3px;
   }
 </style>
