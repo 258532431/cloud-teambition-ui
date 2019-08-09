@@ -5,7 +5,7 @@
         <span>进行中的计划</span>
         <el-button style="float: right; padding: 3px 0" type="text">查看</el-button>
       </div>
-      <div v-for="o in 4" :key="o" class="text item">
+      <div v-for="o in 10" :key="o" class="text item">
         {{'招商银行项目' + o + ' - 预计完成时间：2019-05-05'}}
       </div>
     </el-card>
@@ -14,14 +14,14 @@
         <span>已完成的计划</span>
         <el-button style="float: right; padding: 3px 0" type="text">查看</el-button>
       </div>
-      <div v-for="o in 4" :key="o" class="text item">
+      <div v-for="o in 10" :key="o" class="text item">
         {{'华夏财富项目' + o + ' - 完成时间：2019-03-06'}}
       </div>
     </el-card>
     <div style="clear: both"></div>
 
     <div style="margin-top:10px;width:100%;">
-      <div class="el-icon-message" style="line-height:3;">&nbsp;系统消息</div>
+      <div class="el-icon-message" style="margin-left:15px;line-height:3;">&nbsp;系统消息</div>
       <mu-divider/>
       <el-table
       :data="tableData"
@@ -151,6 +151,8 @@
   .box-card {
     width: 49.9%;
     float: left;
+    height: 300px;
+    overflow-y: auto;
   }
 
 

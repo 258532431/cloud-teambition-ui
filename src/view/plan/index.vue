@@ -30,6 +30,11 @@
             width="180">
             </el-table-column>
             <el-table-column
+            prop="priority"
+            label="优先级"
+            width="100">
+            </el-table-column>
+            <el-table-column
             fixed="right"
             label="操作"
             width="100">
@@ -63,25 +68,29 @@
           name: '招商银行一期项目',
           desc: '主要实现银行内部职工管理',
           startTime: '2016-05-02',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          priority: '高'
         }, {
           createTime: '2016-05-02',
           name: '招商银行二期项目',
           desc: '主要实现银行内部职工管理',
           startTime: '2016-05-02',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          priority: '高'
         }, {
           createTime: '2016-05-02',
           name: '招商银行三期项目',
           desc: '主要实现银行内部职工管理',
           startTime: '2016-05-02',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          priority: '高'
         }, {
           createTime: '2016-05-02',
           name: '招商银行四期项目',
           desc: '主要实现银行内部职工管理',
           startTime: '2016-05-02',
-          endTime: '2016-05-02'
+          endTime: '2016-05-02',
+          priority: '高'
         }],
         currentPage1: 5,
         currentPage2: 5,

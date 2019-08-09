@@ -10,6 +10,7 @@
                     <el-option label="待处理" value="0"></el-option>
                     <el-option label="进行中" value="1"></el-option>
                     <el-option label="已完成" value="2"></el-option>
+                    <el-option label="已作废" value="3"></el-option>
                   </el-select>
                 </el-form-item>
                 <el-form-item>
@@ -49,7 +50,7 @@
                 <el-table-column
                 prop="taskHour"
                 label="预计耗时（h）"
-                width="180">
+                width="120">
                 </el-table-column>
                 <el-table-column
                 prop="endTime"
@@ -60,6 +61,11 @@
                 prop="overTime"
                 label="实际完成时间"
                 width="180">
+                </el-table-column>
+                <el-table-column
+                prop="priority"
+                label="优先级"
+                width="100">
                 </el-table-column>
                 <el-table-column
                 prop="status"
@@ -103,6 +109,7 @@
           taskHour: '2',
           endTime: '2016-05-02',
           overTime: '2016-05-02',
+          priority: '高',
           status: '进行中'
         }, {
           createTime: '2016-05-02',
@@ -111,6 +118,7 @@
           taskHour: '2',
           endTime: '2016-05-02',
           overTime: '2016-05-02',
+          priority: '高',
           status: '待处理'
         }, {
           createTime: '2016-05-02',
@@ -119,6 +127,7 @@
           taskHour: '2',
           endTime: '2016-05-02',
           overTime: '2016-05-02',
+          priority: '高',
           status: '已完成'
         }, {
           createTime: '2016-05-02',
@@ -127,6 +136,7 @@
           taskHour: '2',
           endTime: '2016-05-02',
           overTime: '2016-05-02',
+          priority: '高',
           status: '已作废'
         }, {
           createTime: '2016-05-02',
@@ -135,6 +145,7 @@
           taskHour: '2',
           endTime: '2016-05-02',
           overTime: '2016-05-02',
+          priority: '高',
           status: '进行中'
         }, {
           createTime: '2016-05-02',
@@ -142,6 +153,16 @@
           desc: '列表分页展示数据，带条件搜索',
           taskHour: '2',
           endTime: '2016-05-02',
+          overTime: '2016-05-02',
+          priority: '高',
+          status: '进行中'
+        }, {
+          createTime: '2016-05-02',
+          name: '消息管理列表页面',
+          desc: '列表分页展示数据，带条件搜索',
+          taskHour: '2',
+          endTime: '2016-05-02',
+          priority: '高',
           overTime: '2016-05-02',
           status: '进行中'
         }, {
@@ -151,6 +172,7 @@
           taskHour: '2',
           endTime: '2016-05-02',
           overTime: '2016-05-02',
+          priority: '高',
           status: '进行中'
         }, {
           createTime: '2016-05-02',
@@ -159,6 +181,7 @@
           taskHour: '2',
           endTime: '2016-05-02',
           overTime: '2016-05-02',
+          priority: '高',
           status: '进行中'
         }, {
           createTime: '2016-05-02',
@@ -167,6 +190,7 @@
           taskHour: '2',
           endTime: '2016-05-02',
           overTime: '2016-05-02',
+          priority: '高',
           status: '进行中'
         }, {
           createTime: '2016-05-02',
@@ -175,6 +199,7 @@
           taskHour: '2',
           endTime: '2016-05-02',
           overTime: '2016-05-02',
+          priority: '高',
           status: '进行中'
         }, {
           createTime: '2016-05-02',
@@ -183,6 +208,7 @@
           taskHour: '2',
           endTime: '2016-05-02',
           overTime: '2016-05-02',
+          priority: '高',
           status: '进行中'
         }, {
           createTime: '2016-05-02',
@@ -191,6 +217,7 @@
           taskHour: '2',
           endTime: '2016-05-02',
           overTime: '2016-05-02',
+          priority: '高',
           status: '进行中'
         }, {
           createTime: '2016-05-02',
@@ -199,14 +226,7 @@
           taskHour: '2',
           endTime: '2016-05-02',
           overTime: '2016-05-02',
-          status: '进行中'
-        }, {
-          createTime: '2016-05-02',
-          name: '消息管理列表页面',
-          desc: '列表分页展示数据，带条件搜索',
-          taskHour: '2',
-          endTime: '2016-05-02',
-          overTime: '2016-05-02',
+          priority: '高',
           status: '进行中'
         }],
         searchForm: {
@@ -236,5 +256,6 @@
 .item {
   margin-top: 10px;
   margin-right: 40px;
+  margin-left: 10px;
 }
 </style>
