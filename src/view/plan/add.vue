@@ -64,10 +64,10 @@
         rules: {
           name: [
             { required: true, message: '请输入计划名称', trigger: 'blur' },
-            { min: 3, max: 5, message: '长度在 1 到 20 个字符', trigger: 'blur' }
+            { min: 1, max: 20, message: '长度在 1 到 20 个字符', trigger: 'blur' }
           ],
           priority: [
-            { required: true, message: '请选择活动区域', trigger: 'change' }
+            { required: true, message: '请选择优先级', trigger: 'change' }
           ],
           startTime: [
             { type: 'date', required: true, message: '请选择开始日期', trigger: 'change' }
