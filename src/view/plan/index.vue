@@ -1,5 +1,12 @@
 <template>
     <div class="main-container">
+        <div style="padding-left:10px;line-height:5;">
+        <el-row>
+          <el-col :span="24">
+            <el-button type="primary" @click="toAdd">新增计划</el-button>
+          </el-col>
+        </el-row>
+        </div>
         <div style="min-height:100%">
         <el-table
             :data="tableData"
@@ -32,6 +39,11 @@
             <el-table-column
             prop="priority"
             label="优先级"
+            width="100">
+            </el-table-column>
+            <el-table-column
+            prop="status"
+            label="状态"
             width="100">
             </el-table-column>
             <el-table-column
@@ -69,28 +81,32 @@
           desc: '主要实现银行内部职工管理',
           startTime: '2016-05-02',
           endTime: '2016-05-02',
-          priority: '高'
+          priority: '高',
+          status: '进行中'
         }, {
           createTime: '2016-05-02',
           name: '招商银行二期项目',
           desc: '主要实现银行内部职工管理',
           startTime: '2016-05-02',
           endTime: '2016-05-02',
-          priority: '高'
+          priority: '高',
+          status: '进行中'
         }, {
           createTime: '2016-05-02',
           name: '招商银行三期项目',
           desc: '主要实现银行内部职工管理',
           startTime: '2016-05-02',
           endTime: '2016-05-02',
-          priority: '高'
+          priority: '高',
+          status: '进行中'
         }, {
           createTime: '2016-05-02',
           name: '招商银行四期项目',
           desc: '主要实现银行内部职工管理',
           startTime: '2016-05-02',
           endTime: '2016-05-02',
-          priority: '高'
+          priority: '高',
+          status: '进行中'
         }],
         currentPage1: 5,
         currentPage2: 5,
@@ -104,6 +120,9 @@
         },
         handleCurrentChange(val) {
             console.log(`当前页: ${val}`);
+        },
+        toAdd(){
+          this.$router.push({name: 'planAdd'})
         }
     }
   }

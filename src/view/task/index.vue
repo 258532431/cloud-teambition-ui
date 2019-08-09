@@ -1,6 +1,14 @@
 <template>
     <div class="main-container">
         <div style="min-height:100%">
+            <div style="padding-left:10px;line-height:4;">
+            <el-row>
+              <el-col :span="24">
+                <el-button type="primary">新增任务</el-button>
+              </el-col>
+            </el-row>
+            </div>
+
             <el-form :inline="true" :model="searchForm" style="margin-left:10px;margin-top:10px;" class="demo-form-inline">
                 <el-form-item label="任务名称">
                     <el-input v-model="searchForm.taskName" placeholder="任务名称"></el-input>
