@@ -3,7 +3,7 @@
     <el-card class="box-card">
       <div slot="header" class="clearfix">
         <span>进行中的计划</span>
-        <el-button style="float: right; padding: 3px 0" type="text">查看</el-button>
+        <el-button style="float: right; padding: 3px 0" type="text" @click="toPlan">查看</el-button>
       </div>
       <div v-for="o in 10" :key="o" class="text item">
         {{'招商银行项目' + o + ' - 预计完成时间：2019-05-05'}}
@@ -12,7 +12,7 @@
     <el-card style="margin-left:0.2%;" class="box-card">
       <div slot="header" class="clearfix">
         <span>已完成的计划</span>
-        <el-button style="float: right; padding: 3px 0" type="text">查看</el-button>
+        <el-button style="float: right; padding: 3px 0" type="text" @click="toPlan">查看</el-button>
       </div>
       <div v-for="o in 10" :key="o" class="text item">
         {{'华夏财富项目' + o + ' - 完成时间：2019-03-06'}}
@@ -129,6 +129,9 @@
         },
         handleCurrentChange(val) {
             console.log(`当前页: ${val}`);
+        },
+        toPlan(){
+          this.$router.push({name: 'plan'})
         }
     }
   }

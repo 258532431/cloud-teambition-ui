@@ -10,8 +10,17 @@
                     <el-option label="待处理" value="0"></el-option>
                     <el-option label="进行中" value="1"></el-option>
                     <el-option label="已完成" value="2"></el-option>
-                    <el-option label="已作废" value="3"></el-option>
                   </el-select>
+                </el-form-item>
+                <el-form-item label="优先级">
+                  <el-select v-model="searchForm.priority" placeholder="请选择优先级">
+                    <el-option label="高" value="0"></el-option>
+                    <el-option label="中" value="1"></el-option>
+                    <el-option label="低" value="2"></el-option>
+                  </el-select>
+                </el-form-item>
+                <el-form-item label="显示已废弃任务">
+                  <el-switch v-model="searchForm.del"></el-switch>
                 </el-form-item>
                 <el-form-item>
                     <el-button type="primary" @click="onSearchSubmit">查询</el-button>
@@ -230,7 +239,9 @@
           status: '进行中'
         }],
         searchForm: {
-            taskName: ''
+            taskName: '',
+            del: false,
+            priority: ''
         },
         currentPage1: 5,
         currentPage2: 5,
